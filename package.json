@@ -1,0 +1,23 @@
+{
+  "name": "fantasybot",
+  "version": "0.0.1",
+  "description": "A Discord bot for the Fantasy Lair server",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolsokje/FantasyBot.git"
+  },
+  "author": "lolsokje#5269",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lolsokje/FantasyBot/issues"
+  },
+  "homepage": "https://github.com/lolsokje/FantasyBot#readme",
+  "dependencies": {
+    "discord.js": "git+https://github.com/discordjs/discord.js.git",
+    "patron.js": "git+https://github.com/LJNeon/patron.js.git"
+  }
+}
