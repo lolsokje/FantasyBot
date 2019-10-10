@@ -30,9 +30,18 @@ class CreateRole extends patron.Command {
         const existingRoles = msg.guild.roles.find(r => r.name === args.role);
 
         if (existingRoles) {
-            msg.reply(`Role ${args.role} already exists`);
+            return msg.sender.reply(`Role ${args.role} already exists`, { color: Constants.standardColors.red });
         } else {
-            msg.reply(`Let's create this role`);
+            const newRole = await msg.guild.roles.create({
+                data: {
+                    name: args.role,
+                    color: args.color
+                }
+            });
+            const allpeoplhere = await msg.guild.roles.find(r => r.name === 'allpeoplehere');
+            await newRole.setPosition(allpeoplhere.position);
+
+            return msg.sender.reply(`Role ${args.role} created`, { color: args.color });
         }
     }
 }
