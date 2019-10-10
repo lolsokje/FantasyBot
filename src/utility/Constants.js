@@ -24,6 +24,7 @@ class Constants {
             'Franki Lauda',
             'OG²-members'
         ];
+
         this.protectedRoles = [
             'Muted',
             'allpeoplehere',
@@ -40,6 +41,12 @@ class Constants {
             'carl-bot',
             'Admins',
             'OG²-members'
+        ];
+
+        this.allowedChannels = [
+            'robots-go-here',
+            'admin-bot-playground',
+            'welcome'
         ];
     }
 }
