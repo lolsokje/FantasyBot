@@ -3,7 +3,7 @@ const patron = require('patron.js');
 class Ping extends patron.Command {
     constructor() {
         super({
-            names: ['Ping', 'ping'],
+            names: ['ping'],
             groupName: 'administration',
             description: 'Play ping-pong'
         });
