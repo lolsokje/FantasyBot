@@ -1,9 +1,5 @@
 class Constants {
     constructor() {
-        this.errorCodes = {
-            badRequest: 400,
-            discord: (code) => code >= 500 && code < 600
-        };
         this.standardColors = {
             red: 0xFF0000,
             green: 0x00FF00,
