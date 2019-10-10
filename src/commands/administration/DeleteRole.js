@@ -14,7 +14,7 @@ class DeleteRole extends patron.Command {
                     name: 'role',
                     key: 'role',
                     type: 'string',
-                    example: '$deleterole Ferrari'
+                    example: 'Ferrari'
                 })
             ]
         });
