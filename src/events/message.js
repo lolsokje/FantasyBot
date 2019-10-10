@@ -12,7 +12,9 @@ client.on('message', (msg) => {
             return;
         }
 
-        const inGuild = msg.guild !== null;
+        if (!Constants.allowedChannels.includes(msg.channel.name)) {
+            return;
+        }
 
         msg.sender = new Sender(msg);
         
