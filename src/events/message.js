@@ -14,9 +14,6 @@ client.on('message', (msg) => {
 
         const inGuild = msg.guild !== null;
 
-        if (inGuild) {
-            msg.member = msg.member !== null ? msg.member : await msg.guild.fetchMember(msg.author);
-        }
         msg.sender = new Sender(msg);
         
         const result = await handler.run(msg, Constants.prefix.length);
