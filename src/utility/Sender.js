@@ -5,6 +5,10 @@ class Sender {
         this.msg = msg;
     }
 
+    dm(user, description, options) {
+        return this.constructor.send(user, description, options);
+    }
+
     reply(description, options) {
         return this.constructor.reply(this.msg, description, options);
     }
