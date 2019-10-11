@@ -45,7 +45,12 @@ class Help extends patron.Command {
 
             let message = `**Description**: ${command.description}\n`;
             message += `**Usage**: ${Constants.prefix}${command.getUsage()}\n`;
-            message += `**Example**: ${Constants.prefix}${command.getExample()}`;
+            message += `**Example**: ${Constants.prefix}${command.getExample()}\n`;
+
+            if (command.names.length > 1) {
+                const alternate = command.names.join(', ');
+                message += `**Alternate usages**: ${alternate}`;
+            }
 
             return msg.sender.reply(message, {
                 color: Constants.standardColors.green,
