@@ -8,11 +8,13 @@ const handler = new Handler({ registry });
 
 client.on('message', (msg) => {
     (async () => {
+        const command = msg.content.split(' ')[0].slice(Constants.prefix.length);
+
         if (msg.author.bot === true || Constants.prefixRegex.test(msg.content) === false) {
             return;
         }
 
-        if (!Constants.allowedChannels.includes(msg.channel.name)) {
+        if (!Constants.allowedChannels.includes(msg.channel.name) && !msg.member.permissions.has('ADMINISTRATOR') && !Constants.whitelistedCommands.includes(command)) {
             return;
         }
 
@@ -27,6 +29,8 @@ client.on('message', (msg) => {
                 message = "You need to provide all required arguments";
             } else if (result.commandError === patron.CommandError.UnknownCmd) {
                 message = "This command doesn't exist.";
+            } else {
+                message = result.errorReason;
             }
 
             return msg.sender.reply(message, { color: '0xFF0000'});
