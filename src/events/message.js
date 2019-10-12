@@ -8,7 +8,7 @@ const handler = new Handler({ registry });
 
 client.on('message', (msg) => {
     (async () => {
-        const command = msg.content.split(' ')[0].slice(Constants.prefix.length);
+        const command = msg.content.split(' ')[0].slice(Constants.prefix.length).toLowerCase();
 
         if (msg.author.bot === true || Constants.prefixRegex.test(msg.content) === false) {
             return;

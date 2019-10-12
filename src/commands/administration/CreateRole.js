@@ -21,6 +21,13 @@ class CreateRole extends patron.Command {
                     key: 'color',
                     type: 'color',
                     example: '004225'
+                }),
+                new patron.Argument({
+                    name: 'pingable',
+                    key: 'pingable',
+                    type: 'string',
+                    defaultValue: '',
+                    example: 'true'
                 })
             ]
         });
@@ -39,7 +46,12 @@ class CreateRole extends patron.Command {
                 }
             });
             const allpeoplhere = await msg.guild.roles.find(r => r.name === 'allpeoplehere');
-            await newRole.setPosition(allpeoplhere.position);
+
+            if (args.pingable !== '') {
+                newRole.setMentionable(true);
+            } else {
+                await newRole.setPosition(allpeoplhere.position);
+            }
 
             return msg.sender.reply(`Role ${args.role} created`, { color: args.color });
         }
