@@ -47,7 +47,7 @@ class Constants {
             'welcome'
         ];
         this.whitelistedCommands = [
-
+            'say'
         ];
     }
 }
