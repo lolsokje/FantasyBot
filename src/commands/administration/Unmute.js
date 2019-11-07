@@ -4,7 +4,7 @@ const Constants = require('../../utility/Constants');
 class Unmute extends patron.Command {
     constructor() {
         super({
-            names: ['unmute'],
+            names: ['unmute', 'unshut'],
             groupName: 'administration',
             description: 'Unmutes a member',
             args: [
