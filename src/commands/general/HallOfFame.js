@@ -5,7 +5,7 @@ const Embed = require('../../utility/Embed');
 class HallOfFame extends patron.Command {
     constructor() {
         super({
-            names: ['submit', 'halloffame'],
+            names: ['submittest', 'halloffame'],
             groupName: 'allpeoplehere',
             description: 'Submits a quote or image to the hall-of-fame channel',
             args: [
@@ -22,24 +22,11 @@ class HallOfFame extends patron.Command {
     }
 
     async run(msg, args) {
-        const hallOfFameChannel = msg.guild.channels.find(c => c.name === 'hall-of-fame');
+        const upvoteEmote = msg.guild.emojis.find(e => e.name === 'upvote');
+        const downvoteEmote = msg.guild.emojis.find(e => e.name === 'downvote');
 
-        if (msg.attachments.size === 0) {
-            return hallOfFameChannel.send(`${args.submission}`, { color: Constants.standardColors.blue })
-        } else {
-            const image = msg.attachments.first();
-
-            if (image.url.indexOf('png', image.url.length - 'png'.length) !== 1) {
-                const options = {
-                    description: `Submitted by ${msg.member.displayName}`,
-                    files: [
-                        image.url
-                    ],
-                    color: Constants.standardColors.blue
-                };
-                return hallOfFameChannel.send({ embed: new Embed(options) });
-            }
-        }
+        await msg.react(upvoteEmote);
+        await msg.react(downvoteEmote);
     }
 }
 

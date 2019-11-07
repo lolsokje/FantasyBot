@@ -1,0 +1,1993 @@
+/*********** HEADER IMAGE FIX ***********/
+.pagename a {
+    height: 201px;
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: -201px;
+    transform: translateX(-50%);
+}
+
+.titlebox .md > h3 {
+    font-size: 10px;
+    border-left: 5px solid #0a7ec2;
+    border-right: 5px solid #0a7ec2;
+    background-color: #1e3160;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.titlebox .md h3 + ul {
+    margin: 0;
+}
+
+.titlebox .md ul {
+    padding-left: 0;
+}
+
+.titlebox .md > ul li {
+    list-style-type: none;
+    border-bottom: 1px solid #bbbbbb;
+    width: 310px;
+    text-align: center;
+}
+
+.titlebox .md > ul li a {
+    color: black;
+    font-size: 12px;
+    display: inline-block;
+    padding: 5px 40px;
+}
+
+html {
+    padding-top: 24px;
+}
+
+body {
+    background-color: #EDEDED;
+}
+
+body > .content {
+    margin: 0 0 0 10px;
+    padding-top: 10px;
+}
+
+/* Remove stupid Reddit header image that was suddenly added by Reddit itself and looks absolutely fucking ridiculous */
+#header-img {
+    display: none;
+}
+
+.titlebox form.toggle,
+.leavemoderator {
+    background: transparent;
+    width: 250px;
+    margin-left:10px;
+}
+
+/*Change the word for 'readers' and the currently online*/
+.subscribers .word, .users-online .word {
+    display:none;
+}
+
+.subscribers .number,
+.subscribers .number:after {
+    color: #31aaeb;
+    content: " Storm Riders";
+}
+
+.users-online .number,
+.users-online .number:after {
+    color: #31aaeb;
+    content: " Riding the Storm";
+
+}
+
+/* ------------------ Body -------------------*/
+.side:before {
+    content: "";
+    display: block;
+    margin-top: 21px;
+    background: transparent url(%%lightningSB%%) no-repeat top center;
+    margin-right: 10px;
+    height: 540px;
+    width: 310px;
+}
+
+/* ------------------ Submit Link/Text Post -------------------*/
+.sidebox .spacer {
+    display: none;
+}
+
+.morelink .nub {
+    display: none;
+}
+
+.side .spacer {
+    margin: 8px 0;
+}
+
+.titlebox {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.titlebox h1 a,
+.titlebox h1 a:hover {
+    color: #D0D0D0;
+}
+
+#subButtons-Thunder {
+    text-align: center;
+}
+
+.subscribers {
+    padding: 5px;
+}
+
+.login-form-side {
+    margin-top: 185px;
+}
+
+.users-online {
+    padding: 5px;
+}
+
+.morelink {
+    color: white;
+    border-radius: 4px;
+    border: none!important;
+    background: #1e3160;
+    transition: all 0.3s ease-out;
+    height: 35px;
+}
+
+.morelink a {
+    color: white!important;
+    font-family: "Open Sans",Helvetica Neue,Helvetica,sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 35px;
+    text-transform:uppercase;
+}
+
+.morelink:hover {
+    border-radius: 4px;
+    border: none!important;
+    background: #f05033;
+    transition: all 0.3s ease-out;
+}
+
+/* ------------------ Fix for RES subreddit settings error -------------------*/
+
+.markdownEditor-wrapper { overflow: hidden; }
+
+/* ----------------------- Schedule tv logo ------------------ */
+
+a[href="/SUP"],a[href="/TWI"],a[href="/NBATV"],a[href="/ESPN"],a[href="/TNT"],a[href="/ABC"],.side table:before{
+    width: 33px;
+    height: 22px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(%%spritetvlogo%%);
+    background-position: -9999px -9999px;
+    vertical-align: middle;
+    margin-right: 0;
+}
+
+a[href="/NBATV"],a[href="/ESPN"],a[href="/TNT"],a[href="/ABC"] {
+    cursor:text!important;
+}
+
+.collapsed .flair {
+    opacity: 0.4;
+    display: inline-block;
+}
+
+.flair:before {
+    width: 33px;
+    height: 22px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(%%spritetvlogo%%);
+    background-position: -9999px -9999px;
+    vertical-align: middle;
+    margin-right: 0;
+    content: "";
+}
+
+.flair:before {
+    width: 33px;
+    height: 22px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(%%spritefunaki%%);
+    background-position: -9999px -9999px;
+    vertical-align: middle;
+    margin-right: 0;
+    content: "";
+}
+
+.flair-NBATV:before, a[href="/NBATV"]{
+    content: "";
+    background-position: -202px -144px;
+}
+
+.flair-ESPN:before, a[href="/ESPN"]{
+    content: "";
+    width:48px!important;
+    height:14px!important;
+    background-position: -37px -122px;
+}
+.flair-ESPN{
+    width:49px;
+}
+a[href="/ABC"]{
+    content: "";
+    background-position: -202px -97px;
+}
+.flair-TNT:before, a[href="/TNT"]{
+    content: "";
+    width:46px;
+    background-position: -36px -97px;
+}
+.flair-TNT {
+    width: 46px!important;
+}
+
+.linkflair-custom .linkflairlabel {
+    background: #1e3160;
+    margin-right: 0.5em;
+    border: none;
+    color: white;
+    font-size: x-small;
+    display: inline-block;
+    padding: 2px;
+}
+
+/* ------------------ Schedule team images -------------------*/
+.md [href$="/atlantahawks"]:before {
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -119px -720px;
+    content: '';
+}
+
+.md [href$="/bostonceltics"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -576px;
+    content: '';
+}
+
+.md [href$="/gonets"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -166px -1296px;
+    content: '';
+}
+
+.md [href$="/charlottehornets"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -122px -360px;
+    content: '';
+}
+
+.md [href$="/chicagobulls"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -432px;
+    content: '';
+}
+
+.md [href$="/clevelandcavs"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -502px;
+    content: '';
+}
+
+.md [href$="/mavericks"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -1728px;
+    content: '';
+}
+
+.md [href$="/denvernuggets"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -1872px;
+    content: '';
+}
+
+.md [href$="/detroitpistons"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -72px;
+    content: '';
+}
+
+.md [href$="/warriors"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -936px;
+    content: '';
+}
+
+.md [href$="/rockets"]:before {
+    display: inline-block;
+    content: '';
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -216px;
+}
+
+.md [href$="/pacers"]:before {
+    display: inline-block;
+    content: '';
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px 0;
+}
+
+.md [href$="/laclippers"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -119px -1152px;
+    content: '';
+}
+
+.md [href$="/lakers"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -1368px;
+    content: '';
+}
+
+.md [href$="/memphisgrizzlies"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -792px;
+    content: '';
+}
+
+.md [href$="/heat"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -1008px;
+    content: '';
+}
+
+.md [href$="/mkebucks"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -119px -936px;
+    content: '';
+}
+
+.md [href$="/timberwolves"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -648px;
+    content: '';
+}
+
+.md [href$="/nolapelicans"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -249px -551px!important;
+    content: '';
+}
+
+.md [href$="/nyknicks"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -249px -936px;
+    content: '';
+}
+
+.md [href$="/thunder"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -576px;
+    content: '';
+}
+
+.md [href$="/orlandomagic"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) 0 -1512px;
+    content: '';
+}
+
+.md [href$="/sixers"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -119px -1296px;
+    content: '';
+}
+
+.md [href$="/suns"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -249px -1656px;
+    content: '';
+}
+
+.md [href$="/ripcity"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -864px;
+    content: '';
+}
+
+.md [href$="/kings"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -36px -1656px;
+    content: '';
+}
+
+.md [href$="/nbaspurs"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -83px -288px;
+    content: '';
+}
+
+.md [href$="/torontoraptors"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -119px -792px;
+    content: '';
+}
+
+.md [href$="/utahjazz"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -36px -1584px;
+    content: '';
+}
+
+.md [href$="/washingtonwizards"]:before {
+    display: inline-block;
+    width: 33px;
+    height: 22px;
+    background: url(%%teamlogos%%) -119px -1224px;
+    content: '';
+}
+
+
+/* ------------------ Roster Table styling -------------------*/
+
+.body .md table {
+    border: 2px solid #fff;
+    width: 98%;
+    margin: 3px 0 30px 0;
+    position: relative;
+    left: 3px;
+    overflow: scroll;
+}
+
+.side .md table {
+    width: 100%;
+    margin: 3px 0 30px 0;
+    position: relative;
+    left: 0;
+    overflow: scroll;
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.md table th {
+    background: #1e3160;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid #1e3160;
+    border-right: 1px solid white;
+    color: white;
+    font-weight: bold;
+    padding: .2em;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.md table th a {
+    color: #363636;
+}
+.md tr:nth-of-type(odd) {
+    background: #FFFFFF;
+    color: #000000;
+}
+.md tr:nth-of-type(even) {
+    background: #FFFFFF;
+    color: #000000;
+}
+.md tr:hover, .md tr:hover td:nth-of-type(5) {
+    background: #CCC!important;
+}
+.md table td {
+    font-size: 12px;
+    border: none;
+    padding: .3em;
+    vertical-align: middle;
+}
+.md table td a {
+    color: #27262c !important;
+    font-weight: normal;
+}
+.md table td a:hover {
+    color: #1D8CAA !important;
+    text-decoration: underline;
+}
+/* END TABLE DESIGN  */
+
+/* TABLE DESIGN MODIFICATIONS FOR ONLY THE SIDEBAR */
+.side .md table th {
+    padding: .3em .3em .2em .3em;
+    text-align: center;
+    vertical-align: text-top;
+    font-size: 10px;
+}
+
+.side .md table td {
+    font-size: 10px;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    height: 25px;
+}
+
+.side .md table td a {
+    vertical-align: middle;
+}
+
+.side .md table {
+    margin-bottom: 0; /* margin exception for tables used in the sidebar */
+}
+
+.side .md table th:first-child {
+    border-left: 5px solid #0a7ec2;
+}
+
+.side .md table th:last-child {
+    border-right: 5px solid #0a7ec2;
+}
+/*===========================Change Up/Downvote=========================*/
+
+body:not(.subscriber) div.content ul.flat-list li form.toggle.report-button { visibility: hidden !important; display: none !important; }
+
+/*Change vote arrows*/
+.arrow.up { background-image: url(%%up-neutral%%);
+    background-position: 0 0;
+    height: 13px; width: 15px;
+}
+.arrow.upmod {
+    background-image: url(%%up-active%%);
+    background-position: 0 0;
+    height: 13px; width: 15px;
+}
+.arrow.down { background-image: url(%%down-neutral%%);
+    background-position: 0 0;
+    height: 13px; width: 15px;
+}
+.arrow.downmod {
+    background-image: url(%%down-active%%);
+    background-position: 0 0;
+    height: 13px; width: 15px;
+}
+
+.link .score.likes,
+.link .rank {
+    color: #f05033;
+}
+
+.link .score.unvoted {
+    color: #b9baba;
+}
+
+.link .rank {
+    display: none!important;
+}
+
+/*--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+
+
+/*===================  TITLE LINKS ===========================================================================
+==================================================================================================================*/
+
+.title.click, .title:visited { color: #6abbe7!important; }
+.title:link { color: #f05033!important; font-size:14px!important; /*font-weight: bold;*/ }
+
+/*===================  FLAT LIST BUTTONS / COMMENT, SHARE, SAVE, HIDE ETC ============================================
+==================================================================================================================*/
+
+
+.flat-list.buttons {
+    text-transform: capitalize!important;
+}
+
+.flat-list.buttons a:hover{
+    text-decoration: none;
+}
+
+.flat-list.buttons a.comments span.newComments {
+    top: -1px;
+    font-size: 10px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+}
+.newComments {
+    display: inline;
+}
+
+/*===================  EXPANDO BUTTON ===========================================================================
+==================================================================================================================*/
+
+
+.expando-button {
+    width: 38px!important;
+    height: 22px!important;
+    max-width: 38px!important;
+    max-height: 22px!important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-image: url(%%thunder-logo-expando-big%%)!important;
+    background-position: 0 0!important;
+    background-color:transparent!important;
+}
+
+.tagline {
+    line-height: 29px!important;
+    vertical-align: middle!important;
+}
+
+.commentarea .comment .expando-button {margin-top: -3px!important;}
+
+.expando-button.selftext.expanded:hover, .expando-button.selftext.collapsed:hover, .expando-button.image.expanded:hover, .expando-button.image.collapsed:hover, .expando-button.video.expanded:hover, .expando-button.video.collapsed:hover{
+    -moz-box-shadow:     0 0 0 #000000;
+    -webkit-box-shadow:  0 0 0 #000000;
+    box-shadow:         0 0 0 #000000;
+}
+
+/*===================  POST DESIGN ===========================================================================
+==================================================================================================================*/
+.linklisting .thing {
+    overflow: visible;
+    background-color: white;
+    box-shadow: 0 0 0;
+    border-bottom: 1px dotted #C4CED3;
+    margin: 0;
+    padding: 8px 8px 0 8px;
+}
+
+.linklisting .thing[data-context="comments"] {
+    margin-top: 15px;
+}
+
+.linklisting .last-clicked {
+    border: none;
+    border-bottom: 1px dotted #C4CED3;
+}
+
+.linklisting .thing:hover {
+    background-color: #FAFAFA;
+    box-shadow: 0 0 0 #468fb8;
+}
+.entry.RES-keyNav-activeElement, .entry.RES-keyNav-activeElement div.md, .entry.RES-keyNav-activeElement .usertext-body, .commentarea .entry.RES-keyNav-activeElement div.noncollapsed {
+    background: none transparent!important;
+}
+.link .usertext .md a:visited {color: #31aaeb;}
+a.author{color: #31aaeb;}
+
+.linkinfo {
+    padding: 5px;
+    width: 300px;
+    border: 0;
+    font-family: "Open Sans",Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: larger;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: white;
+    margin-top: 8px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    color: #1e3160;
+}
+
+.linklisting {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.linklisting .stickied {
+    border-left: 4px solid #008000;
+}
+
+.linklisting .stickied .entry .title a {
+    color: green!important;
+}
+
+.linklisting .entry .title a {
+    color: #1e3160!important;
+}
+
+.thing.res-selected {
+    border-left: 4px solid #1e3160;
+}
+
+.linklisting .RES-keyNav-activeThing .stickied {
+    border-left: 4px solid #008000;
+}
+/*--------------------------- Self post/game thread images ------------------------ */
+.thumbnail.default {
+    margin-right: 15px;
+}
+
+.thumbnail.self {
+    height: 50px;
+    width: 85px;
+    background-image: url(%%selfpost%%);
+    background-position: 0 0;
+    margin-top: inherit;
+    opacity: 0.5;
+}
+
+.thumbnail.self[href*="game_thread"] {
+    background-image: url(%%gamepost%%);
+    margin-left: auto;
+    opacity: 0.8;
+    width: 85px;
+}
+
+/*===================  COMMENTS DESIGN ===========================================================================
+==================================================================================================================*/
+
+
+.usertext-edit textarea {
+    border-radius: 4px;
+}
+
+button {
+    margin: 5px 5px 10px 0;
+    background-color: #1e3160;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    text-transform: capitalize;
+    padding: 6px;
+    transition: all 0.3s ease-out;
+}
+button:hover {
+    background: #F05033 !important;
+    transition: all 0.3s ease-out;
+}
+.commentarea .comment {
+    background-color: rgba(254,254,253,0.75)!important;
+}
+
+.res .thing .tagline .author.submitter { background: #1e3160!important; }
+.res .thing .tagline .author.submitter:hover { background: #3D516A!important; }
+
+.res-commentBoxes.res-commentBoxes-rounded .comment, .commentarea .comment {
+    border-radius: 4px !important;
+}
+
+.comment .RES-keyNav-activeElement, .content .commentarea .RES-keyNav-activeElement .md, .content .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+    background-color: transparent!important;
+}
+
+.commentarea .thing .usertext-body .expando-button {margin-left: 4px !important;}
+.md .expando-button {margin-left: 4px !important;}
+
+.new-comment .usertext-body {
+    background-color: transparent;
+    border: none;
+}
+
+/*--------------------------- Post tables ------------------------ */
+
+body .content .md table th {
+    color: #fff!important;
+}
+body .content .md table tr:hover {
+    background: #DFDFDF;
+}
+body .md table tr a {
+    color: #111CB0 !important;
+}
+body .md table th a {
+    color: #101010 !important;
+}
+body .md table tr:nth-of-type(2n+1){
+    background: #eaeaea;
+}
+
+
+/* -------------------- post H's ------------------------------*/
+
+.link .usertext h1, .commentarea h1{
+    color: #101010;
+    font-size: 20px;
+}
+.link .usertext h2, .commentarea h2 {
+    font-size: 18px;
+
+}
+.link .usertext h3, .commentarea h3{
+    color: #101010;
+    font-size: 16px;
+
+}
+.link .usertext h4, .commentarea h4 {
+    color: #C4D400;
+    font-size: 16px;
+}
+.link .usertext h5, .commentarea h5 {
+    color: #101010;
+    font-size: 14px;
+}
+
+
+.error {
+    color: #444444;
+}
+
+.nextprev a{
+    background: white;
+    border: 1px solid #FFF;
+}
+
+.nav-buttons {
+    margin-top: 7px;
+}
+
+.commentarea .comment {
+    -moz-border-radius: 0!important;
+    -webkit-border-radius: 0!important;
+    border-radius: 0!important;
+    margin-left: 3px !important;
+    margin-top: 5px!important;
+    margin-bottom: 3px!important;
+    border: 1px solid #e6e6e6 !important;
+    padding: 5px 8px 5px 5px !important;
+    overflow: hidden !important;
+}
+
+/* ==================================== ===================================================================================================                                       SIDEBAR
+====================================================================================================*/
+
+.side {
+    background-color:#EDEDED;
+    margin-right: 15px;
+    margin-top: 13px;
+    padding: 0 10px;
+    width: 310px;
+}
+
+.side .spacer:nth-of-type(3):before {
+    display: block;
+    width: 310px;
+    color: #000!important;
+    text-align: center;
+    content: '';
+}
+
+/*================================  SEARCH  ==================================================================*/
+
+#search input[type=text] {
+    width: 310px;
+    padding: 0 42px 0 16px;
+    height: 35px;
+    line-height: 35px;
+    border: 0 solid;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+
+/*===================  Misc. Backgrounds/theme==============================================*/
+
+.sidecontentbox .content {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: larger;
+    list-style: none;
+    background-color: transparent;
+    width: 287px;
+    border-top: 10px transparent;
+}
+
+.titlebox .bottom {
+    border-top: 2px solid transparent;
+    padding: 4px;
+    font-size: 80%;
+    color: transparent;
+    width: 297px;
+}
+
+/*================================  non essential link colors  ====================================
+==================================================================================================================*/
+
+.side p a {
+    color: black;
+    background: transparent;
+}
+
+.side a:hover {
+    color: #6abbe7;
+}
+
+.side p:last-child {
+    padding: 0;
+}
+
+/*======================================= disable comments and voting for non-subscribers ===========================
+=======================================================================================================================*/
+
+.link .midcol {
+    overflow: visible;
+}
+
+.link .score {
+    position: relative;
+    top: 16px;
+}
+
+.subscriber .link .score {
+    position: inherit;
+}
+
+.arrow.up {
+    display: block;
+}
+
+.arrow.down {
+    display: none;
+}
+
+.subscriber .arrow.up {
+    display: block;
+}
+
+.subscriber .arrow.down {
+    display: block;
+}
+
+.commentarea>.usertext {
+    display: none;
+}
+
+.subscriber .commentarea>.usertext {
+    display: block;
+}
+
+/*================================  BLOCKQUOTE - TYPE 3 / WELCOME TO LINKS ====================================
+==================================================================================================================*/
+.side .md blockquote:nth-of-type(1) {
+    position: absolute;
+    top: 235px;
+    right: 26px;
+    height: 48px;
+    width: 294px;
+    background-color: #EDEDED;
+    border: 1px solid #113;
+    padding: 6px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.side .md blockquote:nth-of-type(1) h2 {
+    color: #113;
+    margin-bottom: 0;
+    margin-top: -6px;
+    margin-left: -6px;
+    text-align: center;
+    font-size: 10px;
+    padding: 0 8px;
+    width: 290px;
+    border-bottom: 1px solid #101010;
+    pointer-events: none;
+    background-color: #1e3160;
+    height: 16px;
+}
+.side .md blockquote:nth-of-type(1) h2 a{color: #000;}
+
+.side .md blockquote:nth-of-type(1) ul {
+    list-style: none;
+    margin: 4px auto 0 2px;
+    padding: 0;
+}
+.side .md blockquote:nth-of-type(1) ul li {
+    display: inline-block;
+    padding: 0 2px;
+}
+.side .md blockquote:nth-of-type(1) ul li a {
+    background: url(%%hawksthumbs%%) no-repeat;
+    background-color: #949494!important;
+    width: 33px;
+    height: 33px;
+    display: block;
+    text-indent: -9999px;
+    margin: 0 auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.side .md blockquote:nth-of-type(1) ul li a:hover{ background-color: #6a6a6a!important;
+    -moz-box-shadow:     0 0 7px #000000;
+    -webkit-box-shadow:  0 0 7px #000000;
+    box-shadow:         0 0 7px #000000;
+}
+
+.side .md blockquote:nth-of-type(1) ul li:nth-of-type(3){position: relative; top:12px; color: #113; font-size: 24px; margin-top: -13px;}
+
+.side .md blockquote:nth-of-type(1) ul li:nth-of-type(6){position: relative; top:12px; color: #113; font-size: 24px; margin-top: -13px;}
+
+
+.side .md blockquote:nth-of-type(1) ul li a[href$="nba.com/thunder"] {background-position: -330px -28px;}
+.side .md blockquote:nth-of-type(1) ul li a[href$="reddit.com/r/thunder/wiki/"] {background-position: -250px -29px;}
+.side .md blockquote:nth-of-type(1) ul li a[href$="reddit.com/message/compose?to=%2Fr%2FThunder"] {background-position: -360px -155px;}
+.side .md blockquote:nth-of-type(1) ul li a[href$="reddit.com/r/nba"] {background-position: -250px -56px;}
+.side .md blockquote:nth-of-type(1) ul li a[href$="twitter.com/okcthunder"] {background-position: -284px -27px;}
+.side .md blockquote:nth-of-type(1) ul li a[href$="www.facebook.com/OKCThunder"] {background-position: -214px -59px;}
+
+.side .md blockquote:nth-of-type(1) ul li a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    font: bold 11px Arial!important;
+    top: -26px;
+    left: 0;
+    text-align: center;
+    height: 18px;
+    width: 100%;
+    color: #FFFFFF;
+    background: rgba(0,0,0,1);
+    padding: 0 4px;
+    line-height: 18px!important;
+    text-indent: 0;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    z-index:2;
+}
+.side .md blockquote:nth-of-type(1) ul li a:hover:before {top: 0;}
+
+.side .md blockquote:nth-of-type(1) ul li a[href*="nba.com/thunder"]:before {content: "Thunder Full Schedule and Scores";}
+.side .md blockquote:nth-of-type(1) ul li a[href*="www.reddit.com/r/thunder/wiki/"]:before {content: "r/Thunder Wiki Page";}
+.side .md blockquote:nth-of-type(1) ul li a[href$="https://www.reddit.com/message/compose?to=%2Fr%2FThunder"]:before {content: "Message the Mods";}
+.side .md blockquote:nth-of-type(1) ul li a[href$="reddit.com/r/nba"]:before {content: "r/NBA";}
+.side .md blockquote:nth-of-type(1) ul li a[href$="twitter.com/okcthunder"]:before {content: "Official Thunder Twitter";}
+.side .md blockquote:nth-of-type(1) ul li a[href$="www.facebook.com/OKCThunder"]:before {content: "Official Thunder Facebook";}
+
+/* Header */
+#header {
+    background: url(%%dopestheader%%) center top #000 no-repeat;
+    height: 300px;
+    left: -100px;
+    position: static;
+    margin-bottom: 24px;
+}
+/*=========================REDDIT HEADER/SUBREDDIT HOME LINK======================*/
+#header-img.default-header {
+    display: none;
+}
+
+#header-bottom-left {
+    z-index: 1;
+    position: relative;
+    height: 30px;
+    top: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.pagename {font-size:0;}
+
+#header #header-bottom-left span.pagename.redditname a:hover {
+    transition: opacity .3s ease-in;
+    opacity:1;
+}
+
+h1.redditname {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    background-color: #EAEBEC;
+}
+
+.side .redditname a{
+    text-align: center;
+    background-color: #EAEBEC;
+    width: 100%;
+}
+
+/*================================  SR HEADER - SUBREDDIT BAR AT TOP  ====================================
+==================================================================================================================*/
+#sr-header-area {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    min-width: 1000px;
+    height: 24px;
+    max-height: 25px;
+    background: #1e3160;
+    border: none;
+    line-height: 25px;
+    border-bottom: 0 solid #113;
+    z-index: 7;
+}
+.sr-bar a {
+    color: white;
+}
+#sr-header-area a.subbarlink.RESShortcutsCurrentSub, #RESSubredditGroupDropdown .RESShortcutsCurrentSub a {
+    color: white!important;
+}
+
+#srDropdownContainer a {
+    background: url(%%down-neutral%%) no-repeat 5px 5px;
+    text-indent: -1px;
+    display: block;
+    width: 29px;
+    height: 24px;
+}
+
+#RESStaticShortcuts {
+    margin-left: 50px;
+}
+#srLeftContainer, #RESShortcutsViewport, #RESShortcutsEditContainer {
+    max-height: 24px !important;
+    height: 24px !important;
+    background: transparent !important;
+}
+#RESShortcutsEditContainer {
+    margin-right: 10px !important;
+}
+#RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+    background: transparent !important;
+    color: #113 !important;
+    line-height: 22px !important;
+    height: 24px !important;
+    font-size: 12px !important;
+}
+
+/*NO RES FIX*/
+.dropdown.srdrop .selected {
+    background-position: 6px 6px;
+    text-indent: -9999px;
+    display: block;
+    width: 21px;
+    height: 24px;
+    padding: 0;
+}
+.dropdown.srdrop .selected:hover {
+    opacity: .6;
+}
+#sr-more-link {
+    border-left: 1px solid #963608;
+    padding: 0 10px 0 12px;
+}
+
+/*===================  USER BAR ===========================================================================
+==================================================================================================================*/
+#header #header-bottom-right {
+    top: -4px;
+    background: #1e3160;
+    height: 22px;
+    line-height: 30px;
+    position: absolute;
+    right: 90px;
+    z-index: 7;
+    padding-top: 2px;
+    padding-bottom: 0;
+}
+
+.res #header #header-bottom-right{
+    padding: 1px 5px 0 20px;
+}
+
+
+#header #header-bottom-right a{
+    color: #d2eefd;
+    text-transform: capitalize;
+    min-width: 20px;
+}
+.userkarma {
+    color:  #002d62;
+}
+
+#header-bottom-right .separator {
+    color:   #113;
+}
+
+.res #userbarToggle {
+    color: #e81132;
+    background: #101010;
+    border-right: 3px solid #e81132;
+    top: 0;
+    height: 30px;
+    line-height:30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 2px;
+    border-radius: 4px;
+}
+.res-navTop #userbarToggle.userbarShow {
+    border-left: 3px solid #e81132;
+    margin-top: 0;
+    border-right: none;
+    min-height:30px;
+
+}
+
+/*--------------------------- Tab Menu (Top, Hot, New, etc.) ----------------------------*/
+
+#header .tabmenu {
+    font-size: 10px;
+    line-height: 30px;
+    display: inline-block;
+    z-index: 1;
+    margin-top: 80px;
+    border-bottom: 2px solid #3D516A;
+    border-radius: 25px;
+    background: #1e3160;
+}
+#header .tabmenu:hover {
+    z-index: 1!important;
+}
+#header .tabmenu li {
+    font-weight: normal;
+    margin: 0;
+}
+
+#header .tabmenu li:first-child {
+    margin-left: 15px;
+}
+
+#header .tabmenu li:last-child {
+    margin-right: 15px;
+}
+
+#header .tabmenu li a {
+    background: transparent;
+    color: white;
+    text-transform: uppercase;
+    border-right: 2px solid transparent;
+    padding: 10px 10px 10px 10px;
+}
+
+#header .tabmenu li a:hover {
+    color: #fff;
+    background:  #3D516A;
+
+}
+#header .tabmenu li.selected a {
+    border: 0;
+    color: #fff;
+    border-right: 2px solid transparent;
+    background: #3D516A;
+    padding: 10px 10px 9px 10px;
+}
+
+/* --------------------------------------  reddit/sub links -----------------------*/
+
+.pagename {font-size:0;}
+
+.flair {
+    background: url(%%spritesheet-oct-2018%%) no-repeat -9999px;
+    border: 0;
+    padding: 0;
+}
+
+.flair-0 {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -5px;
+}
+
+.flair-1 {
+    width: 13px;
+    height: 28px;
+    background-position: -45px -5px;
+}
+
+.flair-11 {
+    width: 30px;
+    height: 30px;
+    background-position: -68px -5px;
+}
+
+.flair-12 {
+    width: 30px;
+    height: 30px;
+    background-position: -108px -5px;
+}
+
+.flair-13 {
+    width: 30px;
+    height: 28px;
+    background-position: -148px -5px;
+}
+
+.flair-17 {
+    width: 30px;
+    height: 28px;
+    background-position: -188px -5px;
+}
+
+.flair-2 {
+    width: 30px;
+    height: 30px;
+    background-position: -228px -5px;
+}
+
+.flair-21 {
+    width: 30px;
+    height: 30px;
+    background-position: -268px -5px;
+}
+
+.flair-23 {
+    width: 30px;
+    height: 28px;
+    background-position: -308px -5px;
+}
+
+.flair-3 {
+    width: 30px;
+    height: 30px;
+    background-position: -148px -43px;
+}
+
+.flair-30 {
+    width: 30px;
+    height: 30px;
+    background-position: -188px -43px;
+}
+
+.flair-34 {
+    width: 30px;
+    height: 30px;
+    background-position: -308px -43px;
+}
+
+.flair-4 {
+    width: 30px;
+    height: 30px;
+    background-position: -5px -83px;
+}
+
+.flair-5 {
+    width: 30px;
+    height: 30px;
+    background-position: -45px -83px;
+}
+
+.flair-54 {
+    width: 30px;
+    height: 28px;
+    background-position: -85px -83px;
+}
+
+.flair-6 {
+    width: 30px;
+    height: 30px;
+    background-position: -125px -83px;
+}
+
+.flair-7 {
+    width: 17px;
+    height: 28px;
+    background-position: -165px -83px;
+}
+
+.flair-8 {
+    width: 30px;
+    height: 30px;
+    background-position: -192px -83px;
+}
+
+.flair-9 {
+    width: 30px;
+    height: 30px;
+    background-position: -232px -83px;
+}
+
+.flair-Abrines {
+    width: 30px;
+    height: 36px;
+    background-position: -272px -83px;
+}
+
+.flair-Adams {
+    width: 30px;
+    height: 34px;
+    background-position: -312px -83px;
+}
+
+.flair-Burton {
+    width: 30px;
+    height: 34px;
+    background-position: -5px -127px;
+}
+
+.flair-Davis {
+    width: 30px;
+    height: 46px;
+    background-position: -45px -127px;
+}
+
+.flair-Diallo {
+    width: 30px;
+    height: 36px;
+    background-position: -85px -127px;
+}
+
+.flair-Felton {
+    width: 30px;
+    height: 38px;
+    background-position: -125px -127px;
+}
+
+.flair-Ferguson {
+    width: 30px;
+    height: 42px;
+    background-position: -165px -127px;
+}
+
+.flair-George {
+    width: 30px;
+    height: 42px;
+    background-position: -205px -127px;
+}
+
+.flair-Grant {
+    width: 30px;
+    height: 38px;
+    background-position: -312px -127px;
+}
+
+.flair-Luwawu-Cabarot {
+    width: 30px;
+    height: 45px;
+    background-position: -5px -175px;
+}
+
+.flair-Nader {
+    width: 30px;
+    height: 41px;
+    background-position: -85px -175px;
+}
+
+.flair-Noel {
+    width: 30px;
+    height: 48px;
+    background-position: -125px -175px;
+}
+
+.flair-Patterson {
+    width: 30px;
+    height: 39px;
+    background-position: -245px -175px;
+}
+
+.flair-Roberson {
+    width: 30px;
+    height: 40px;
+    background-position: -285px -175px;
+}
+
+.flair-Schroder {
+    width: 30px;
+    height: 44px;
+    background-position: -325px -175px;
+}
+
+.flair-Westbrook {
+    width: 30px;
+    height: 41px;
+    background-position: -45px -229px;
+}
+
+.flair-adams1 {
+    width: 30px;
+    height: 39px;
+    background-position: -85px -229px;
+}
+
+.flair-adams-face {
+    width: 30px;
+    height: 30px;
+    background-position: -165px -229px;
+}
+
+.flair-atl {
+    width: 24px;
+    height: 22px;
+    background-position: -205px -229px;
+}
+
+.flair-babyface-steven {
+    width: 23px;
+    height: 30px;
+    background-position: -239px -229px;
+}
+
+.flair-bos {
+    width: 25px;
+    height: 22px;
+    background-position: -272px -229px;
+}
+
+.flair-bro {
+    width: 22px;
+    height: 22px;
+    background-position: -307px -229px;
+}
+
+.flair-cha {
+    width: 23px;
+    height: 22px;
+    background-position: -5px -261px;
+}
+
+.flair-chi {
+    width: 29px;
+    height: 22px;
+    background-position: -125px -261px;
+}
+
+.flair-cle {
+    width: 33px;
+    height: 22px;
+    background-position: -272px -261px;
+}
+
+.flair-dal {
+    width: 24px;
+    height: 22px;
+    background-position: -205px -261px;
+}
+
+.flair-den {
+    width: 32px;
+    height: 21px;
+    background-position: -315px -261px;
+}
+
+.flair-det {
+    width: 27px;
+    height: 22px;
+    background-position: -38px -292px;
+}
+
+.flair-donovan {
+    width: 30px;
+    height: 30px;
+    background-position: -75px -292px;
+}
+
+.flair-east {
+    width: 30px;
+    height: 30px;
+    background-position: -164px -292px;
+}
+
+.flair-glasses {
+    width: 26px;
+    height: 8px;
+    background-position: -315px -292px;
+}
+
+.flair-gsw {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -310px;
+}
+
+.flair-hou {
+    width: 21px;
+    height: 20px;
+    background-position: -239px -292px;
+}
+
+.flair-ind {
+    width: 24px;
+    height: 22px;
+    background-position: -115px -310px;
+}
+
+.flair-kanter-face {
+    width: 30px;
+    height: 30px;
+    background-position: -270px -310px;
+}
+
+.flair-lac {
+    width: 22px;
+    height: 22px;
+    background-position: -204px -310px;
+}
+
+.flair-lal {
+    width: 32px;
+    height: 22px;
+    background-position: -310px -310px;
+}
+
+.flair-mem {
+    width: 27px;
+    height: 22px;
+    background-position: -348px -5px;
+}
+
+.flair-mia {
+    width: 29px;
+    height: 22px;
+    background-position: -348px -37px;
+}
+
+.flair-mil {
+    width: 19px;
+    height: 22px;
+    background-position: -352px -69px;
+}
+
+.flair-min {
+    width: 33px;
+    height: 22px;
+    background-position: -352px -101px;
+}
+
+.flair-nba {
+    width: 14px;
+    height: 30px;
+    background-position: -245px -133px;
+}
+
+.flair-nick1 {
+    width: 30px;
+    height: 34px;
+    background-position: -357px -229px;
+}
+
+.flair-nick2 {
+    width: 23px;
+    height: 30px;
+    background-position: -269px -133px;
+}
+
+.flair-nop {
+    width: 29px;
+    height: 22px;
+    background-position: -352px -133px;
+}
+
+.flair-nyk {
+    width: 33px;
+    height: 22px;
+    background-position: -357px -273px;
+}
+
+.flair-okc {
+    width: 31px;
+    height: 22px;
+    background-position: -352px -305px;
+}
+
+.flair-okcwordmark {
+    width: 39px;
+    height: 21px;
+    background-position: -37px -337px;
+}
+
+.flair-orl {
+    width: 32px;
+    height: 22px;
+    background-position: -149px -337px;
+}
+
+.flair-perk {
+    width: 14px;
+    height: 29px;
+    background-position: -365px -165px;
+}
+
+.flair-pg1 {
+    width: 30px;
+    height: 30px;
+    background-position: -352px -337px;
+}
+
+.flair-pg2 {
+    width: 30px;
+    height: 48px;
+    background-position: -387px -5px;
+}
+
+.flair-phi {
+    width: 28px;
+    height: 22px;
+    background-position: -387px -63px;
+}
+
+.flair-phx {
+    width: 24px;
+    height: 22px;
+    background-position: -395px -95px;
+}
+
+.flair-por {
+    width: 25px;
+    height: 22px;
+    background-position: -395px -127px;
+}
+
+.flair-presti {
+    width: 30px;
+    height: 30px;
+    background-position: -391px -159px;
+}
+
+.flair-rumble {
+    width: 30px;
+    height: 30px;
+    background-position: -397px -199px;
+}
+
+.flair-sac {
+    width: 19px;
+    height: 21px;
+    background-position: -397px -239px;
+}
+
+.flair-sas {
+    width: 33px;
+    height: 20px;
+    background-position: -165px -199px;
+}
+
+.flair-singler {
+    width: 30px;
+    height: 44px;
+    background-position: -400px -270px;
+}
+
+.flair-teamusa {
+    width: 28px;
+    height: 30px;
+    background-position: -393px -324px;
+}
+
+.flair-thunderup {
+    width: 30px;
+    height: 26px;
+    background-position: -86px -364px;
+}
+
+.flair-tor {
+    width: 28px;
+    height: 22px;
+    background-position: -191px -364px;
+}
+
+.flair-uta {
+    width: 22px;
+    height: 22px;
+    background-position: -236px -324px;
+}
+
+.flair-was {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -364px;
+}
+
+.flair-wb2 {
+    width: 30px;
+    height: 39px;
+    background-position: -229px -364px;
+}
+
+.flair-west {
+    width: 30px;
+    height: 30px;
+    background-position: -269px -364px;
+}
+
+.flair-westbrook-stank-face {
+    width: 30px;
+    height: 30px;
+    background-position: -309px -364px;
+}
+
+
+/* --------------------------------------  Header image link -----------------------*/
+/* Upquotes */
+.thing .upmod:focus::after {
+    content: "";
+    padding: 6px;
+    background-color: #000000; /* Quote background color */
+    border: none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 13px;
+    position: relative;
+    bottom: 18px;
+    opacity: 0;
+    pointer-events: none;
+    animation: upquote 4s ease-out;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    z-index: 9000;
+}
+
+@keyframes upquote {
+    0% {
+        color: #fff;
+    }
+
+    8% {
+        bottom: 23px;
+        opacity: 1;
+    }
+
+    15% {
+        bottom: 28px;
+    }
+
+    30% {
+        color: #fff;
+    }
+
+    50% {
+        color: #fff;
+        bottom: 33px;
+    }
+
+    60% {
+        color: #fff;
+    }
+
+    99% {
+        bottom: 38px;
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+.thing[data-fullname$="c"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="a"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="b"] > .midcol > .upmod:focus::after {
+    content: "Thats how we do it in my church leauge";
+}
+
+.thing[data-fullname$="d"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="e"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="i"] > .midcol > .upmod:focus::after {
+    content: "Fuck KD";
+}
+
+.thing[data-fullname$="f"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="j"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="l"] > .midcol > .upmod:focus::after {
+    content: "Mate.";
+}
+
+.thing[data-fullname$="g"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="m"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="n"] > .midcol > .upmod:focus::after {
+    content: "Thunder the fuck up!";
+}
+
+.thing[data-fullname$="k"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="h"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="p"] > .midcol > .upmod:focus::after {
+    content: "Mouse in the house";
+}
+
+.thing[data-fullname$="o"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="q"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="r"] > .midcol > .upmod:focus::after{
+    content: "Right in the kiwis";
+}
+
+.thing[data-fullname$="u"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="s"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="t"] > .midcol > .upmod:focus::after {
+    content: "TTFU";
+}
+
+.thing[data-fullname$="v"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="x"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="y"] > .midcol > .upmod:focus::after {
+    content: "Thunder up!";
+}
+
+.thing[data-fullname$="w"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="z"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="1"] > .midcol > .upmod:focus::after{
+    content: "Mr thunder";
+}
+
+.thing[data-fullname$="2"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="4"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="5"] > .midcol > .upmod:focus::after {
+    content: "You heard it here first";
+}
+
+
+.thing[data-fullname$="3"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="6"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="7"] > .midcol > .upmod:focus::after {
+    content: "Cant win with these cats";
+}
+
+.thing[data-fullname$="0"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="8"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="9"] > .midcol > .upmod:focus::after,
+.thing[data-fullname$="%"] > .midcol > .upmod:focus::after {
+    content: "Scared money dont make none";
+}
+
+.thing .upmod:focus:after {
+    white-space: nowrap;
+}
+
+.midcol,
+.last-clicked.midcol {
+    overflow: visible !important;
+}
