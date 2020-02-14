@@ -14,7 +14,7 @@ class Constants {
             'boosty boi',
             'Muted',
             'AAAAAAAAH IT\'S A ROBOT',
-            'AICGP',
+            'ACGPI',
             'OG Members',
             'NotSoBot',
             'MEE6',
@@ -27,7 +27,7 @@ class Constants {
         this.protectedRoles = [
             'Muted',
             'allpeoplehere',
-            'AICGP',
+            'ACGPI',
             'Welcome',
             'OG Members',
             'AAAAAAAAH IT\'S A ROBOT',
