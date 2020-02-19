@@ -42,7 +42,7 @@ class Constants {
             'OG²-members'
         ];
         this.allowedChannels = [
-            'robots-go-here',
+            'robots-and-shitposts',
             'admin-bot-playground',
             'welcome'
         ];
