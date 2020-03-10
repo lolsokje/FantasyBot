@@ -14,7 +14,9 @@ client.on('message', (msg) => {
             return;
         }
 
-        if (!Constants.allowedChannels.includes(msg.channel.name) && !msg.member.permissions.has('ADMINISTRATOR') && !Constants.whitelistedCommands.includes(command)) {
+        if (Constants.allowedChannelIds[msg.channel.id] === undefined
+            && !msg.member.permissions.has('ADMINISTRATOR')
+            && !Constants.whitelistedCommands.includes(command)) {
             return;
         }
 

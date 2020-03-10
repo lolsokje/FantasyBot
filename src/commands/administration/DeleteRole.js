@@ -21,11 +21,11 @@ class DeleteRole extends patron.Command {
     }
 
     async run(msg, args) {
-        const role = msg.guild.roles.cache.find(r => r.name === args.role);
+        const role = msg.guild.roles.cache.find(r => r.name.toLowerCase() === args.role.toLowerCase());
 
         if (!role) {
             return msg.sender.reply(`Can't find role ${args.role}`, { color: Constants.standardColors.red });
-        } else if (Constants.permanentRoles.includes(args.role)) {
+        } else if (Constants.permanentRoleIds[role.id] !== undefined) {
             return msg.sender.reply(`Role ${args.role} can't be removed`, { color: Constants.standardColors.red });
         } else {
             await role.delete();
