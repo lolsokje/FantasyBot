@@ -13,11 +13,16 @@ class AllRoles extends patron.Command {
     async run(msg) {
         const allRoles = await msg.guild.roles.cache;
         let message = '**Assignable roles:**\n\n';
+        const roles = [];
 
         allRoles.forEach(role => {
             if (Constants.protectedRoleIds[role.id] === undefined) {
-                message += `${role.name}\n`;
+                roles[role.position] = role.name;
             }
+        });
+
+        roles.reverse().forEach(role => {
+            message += `${role}\n`;
         });
 
         return msg.sender.reply(message, { color: Constants.standardColors.green });
