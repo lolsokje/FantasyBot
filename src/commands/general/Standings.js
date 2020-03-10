@@ -33,7 +33,9 @@ class Standings extends patron.Command {
         const driverTypes = ['drivers', 'driver', 'wdc'];
         const allTypes = ['all', 'both'];
 
-        if (year < 1950 || year > 2020) {
+        if (year === 2008) {
+            return msg.sender.reply('Go fuck yourself', { color: Constants.standardColors.red });
+        } else if (year < 1950 || year > 2020) {
             return msg.sender.reply('Year must be between 1950 and 2020', { color: Constants.standardColors.red });
         } else if (year < 1958 && (teamTypes.includes(type) || allTypes.includes(type))) {
             return msg.sender.reply('There was no constructors\' title before 1958, you donkey', { color: Constants.standardColors.red });
