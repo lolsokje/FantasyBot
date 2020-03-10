@@ -19,8 +19,8 @@ class Unmute extends patron.Command {
     }
 
     async run(msg, args) {
-        const member = msg.guild.members.find(m => m.id === args.user.id);
-        const role = member.roles.find(r => r.name === 'Muted');
+        const member = msg.guild.members.cache.find(m => m.id === args.user.id);
+        const role = member.roles.cache.find(r => r.name === 'Muted');
 
         if (role) {
             await member.roles.remove(role);

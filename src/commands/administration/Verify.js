@@ -12,10 +12,10 @@ class Verify extends patron.Command {
     }
 
     async run(msg, args) {
-        const member = msg.mentions.members.first();
-        const welcomeRole = msg.guild.roles.find(r => r.name === 'Welcome');
-        const allpeoplehereRole = msg.guild.roles.find(r => r.name === 'allpeoplehere');
-        const generalChannel = msg.guild.channels.find(c => c.name === 'general');
+        const member = msg.mentions.members.cache.first();
+        const welcomeRole = msg.guild.roles.cache.find(r => r.name === 'Welcome');
+        const allpeoplehereRole = msg.guild.roles.cache.find(r => r.name === 'allpeoplehere');
+        const generalChannel = msg.guild.channels.cache.find(c => c.name === 'general');
 
         await member.roles.remove(welcomeRole);
         await member.roles.add(allpeoplehereRole);

@@ -34,7 +34,7 @@ class CreateRole extends patron.Command {
     }
 
     async run(msg, args) {
-        const existingRoles = msg.guild.roles.find(r => r.name === args.role);
+        const existingRoles = msg.guild.roles.cache.find(r => r.name === args.role);
 
         if (existingRoles) {
             return msg.sender.reply(`Role ${args.role} already exists`, { color: Constants.standardColors.red });
@@ -45,7 +45,7 @@ class CreateRole extends patron.Command {
                     color: args.color
                 }
             });
-            const allpeoplhere = await msg.guild.roles.find(r => r.name === 'allpeoplehere');
+            const allpeoplhere = await msg.guild.roles.cache.find(r => r.name === 'allpeoplehere');
 
             if (args.pingable !== '') {
                 newRole.setMentionable(true);

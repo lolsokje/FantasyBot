@@ -32,8 +32,8 @@ class Mute extends patron.Command {
     }
 
     async run(msg, args) {
-        const member = msg.guild.members.find(m => m.id === args.user.id);
-        const muteRole = msg.guild.roles.find(r => r.name === 'Muted');
+        const member = msg.guild.members.cache.find(m => m.id === args.user.id);
+        const muteRole = msg.guild.roles.cache.find(r => r.name === 'Muted');
 
         const duration = args.duration;
         const time = duration.replace(/\D/g, '');

@@ -19,11 +19,11 @@ class Role extends patron.Command {
     }
 
     async run(msg, args) {
-        const existingRole = msg.guild.roles.find(r => r.name === args.role);
+        const existingRole = msg.guild.roles.cache.find(r => r.name === args.role);
 
         if (!existingRole) {
             return msg.sender.reply(`Role ${args.role} doesn't exist`, { color: Constants.standardColors.red });
-        } else if (msg.member.roles.find(r => r.name === args.role)) {
+        } else if (msg.member.roles.cache.find(r => r.name === args.role)) {
             await msg.member.roles.remove(existingRole);
             return msg.sender.reply(`Role ${args.role} removed from ${msg.member.displayName}`, { color: existingRole.color });
         } else {

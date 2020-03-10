@@ -12,7 +12,7 @@ class Roles extends patron.Command {
     async run(msg) {
         let message = `**Roles for ${msg.member.displayName}:**\n\n`;
 
-        const roles = await msg.member.roles;
+        const roles = await msg.member.roles.cache;
 
         roles.forEach(role => message += `${role.name}\n`);
 
