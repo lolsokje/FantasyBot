@@ -19,12 +19,12 @@ class LeaveRole extends patron.Command {
     }
 
     async run(msg, args) {
-        const role = msg.guild.roles.cache.find(r => r.name === args.role);
-        const hasRole = msg.member.roles.cache.find(r => r.name === args.role) !== undefined;
+        const role = msg.guild.roles.cache.find(r => r.name.toLowerCase() === args.role.toLowerCase());
+        const hasRole = msg.member.roles.cache.find(r => r.name.toLowerCase() === args.role.toLowerCase()) !== undefined;
 
         if (!role) {
             return msg.sender.reply(`Role ${args.role} doesn't exist`, { color: Constants.standardColors.red });
-        } else if (Constants.protectedRoles.includes(args.role)) {
+        } else if (Constants.protectedRoleIds[role.id] !== undefined) {
             return msg.sender.reply(`Role ${args.role} can't be assigned manually, please contact an Administrator`, { color: Constants.standardColors.red })
         } else if (!hasRole) {
             return msg.sender.reply(`You currently don't have role ${args.role}`);

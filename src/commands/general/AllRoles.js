@@ -15,7 +15,7 @@ class AllRoles extends patron.Command {
         let message = '**Assignable roles:**\n\n';
 
         allRoles.forEach(role => {
-            if (!Constants.protectedRoles.includes(role.name)) {
+            if (Constants.protectedRoleIds[role.id] === undefined) {
                 message += `${role.name}\n`;
             }
         });
