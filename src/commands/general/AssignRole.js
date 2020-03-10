@@ -19,8 +19,8 @@ class AssignRole extends patron.Command {
     }
 
     async run(msg, args) {
-        const role = msg.guild.roles.find(r => r.name === args.role);
-        const hasRole = msg.member.roles.find(r => r.name === args.role) !== undefined;
+        const role = msg.guild.roles.cache.find(r => r.name === args.role);
+        const hasRole = msg.member.roles.cache.find(r => r.name === args.role) !== undefined;
 
         if (!role) {
             return msg.sender.reply(`Role ${args.role} doesn't exist`, { color: Constants.standardColors.red });

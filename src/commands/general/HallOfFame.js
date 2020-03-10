@@ -5,7 +5,7 @@ const Embed = require('../../utility/Embed');
 class HallOfFame extends patron.Command {
     constructor() {
         super({
-            names: ['submittest', 'halloffame'],
+            names: ['submit', 'halloffame'],
             groupName: 'allpeoplehere',
             description: 'Submits a quote or image to the hall-of-fame channel',
             args: [
@@ -22,8 +22,8 @@ class HallOfFame extends patron.Command {
     }
 
     async run(msg, args) {
-        const upvoteEmote = msg.guild.emojis.find(e => e.name === 'upvote');
-        const downvoteEmote = msg.guild.emojis.find(e => e.name === 'downvote');
+        const upvoteEmote = msg.guild.emojis.cache.find(e => e.name === 'upvote');
+        const downvoteEmote = msg.guild.emojis.cache.find(e => e.name === 'downvote');
 
         await msg.react(upvoteEmote);
         await msg.react(downvoteEmote);

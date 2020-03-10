@@ -21,7 +21,7 @@ class DeleteRole extends patron.Command {
     }
 
     async run(msg, args) {
-        const role = msg.guild.roles.find(r => r.name === args.role);
+        const role = msg.guild.roles.cache.find(r => r.name === args.role);
 
         if (!role) {
             return msg.sender.reply(`Can't find role ${args.role}`, { color: Constants.standardColors.red });

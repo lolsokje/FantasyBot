@@ -11,7 +11,7 @@ class AllRoles extends patron.Command {
     }
 
     async run(msg) {
-        const allRoles = await msg.guild.roles;
+        const allRoles = await msg.guild.roles.cache;
         let message = '**Assignable roles:**\n\n';
 
         allRoles.forEach(role => {

@@ -24,8 +24,8 @@ client.on('messageReactionAdd', (messageReaction, user) => {
         }
 
         const msg = messageReaction.message;
-        const hallOfFameChannel = msg.guild.channels.find(c => c.name === 'hall-of-fame');
-        const robotChannel = msg.guild.channels.find(c => c.name === 'robots-go-here');
+        const hallOfFameChannel = msg.guild.channels.cache.find(c => c.name === 'hall-of-fame');
+        const robotChannel = msg.guild.channels.cache.find(c => c.name === 'robots-and-shitposts');
 
         if (msg.channel.name !== robotChannel.name) {
             return;
@@ -34,14 +34,14 @@ client.on('messageReactionAdd', (messageReaction, user) => {
         let upvoteCount = 0;
         let downvoteCount = 0;
 
-        msg.reactions.forEach((reaction) => {
+        msg.reactions.cache.forEach((reaction) => {
             const msgReaction = msg.reactions.resolve(reaction);
             const emoji = msgReaction.emoji;
 
             emoji.name === 'upvote' ? upvoteCount = msgReaction.count : downvoteCount = msgReaction.count;
         });
 
-        const requiredUpvotes = downvoteCount + 3;
+        const requiredUpvotes = downvoteCount + 4;
 
         if (upvoteCount >= requiredUpvotes) {
             if (msg.attachments.size > 0) {
