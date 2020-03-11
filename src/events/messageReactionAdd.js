@@ -24,8 +24,8 @@ client.on('messageReactionAdd', (messageReaction, user) => {
         }
 
         const msg = messageReaction.message;
-        const hallOfFameChannel = msg.guild.channels.cache.find(c => c.id === parseInt('633598988142116884'));
-        const robotChannel = msg.guild.channels.cache.find(c => c.id === parseInt('515617239521558548'));
+        const hallOfFameChannel = msg.guild.channels.cache.find(c => c.id === '633598988142116884');
+        const robotChannel = msg.guild.channels.cache.find(c => c.id === '515617239521558548');
 
         if (msg.channel.name !== robotChannel.name) {
             return;
