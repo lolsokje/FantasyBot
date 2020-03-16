@@ -20,7 +20,8 @@ class Say extends patron.Command {
     }
 
     async run(msg, args) {
-        return msg.sender.reply(args.message, { color: Constants.standardColors.green });
+        await msg.sender.reply(args.message, { color: Constants.standardColors.green });
+        msg.delete();
     }
 }
 
