@@ -44,7 +44,8 @@ class Constants {
         this.allowedChannelIds = {
             '515617239521558548': 'robots-and-shitposts',
             '631221631301320708': 'admin-bot-playground',
-            '630735325303537665': 'welcome'
+            '630735325303537665': 'welcome',
+            '630445959612071990': 'general-discussion'
         };
 
         this.whitelistedCommands = [
