@@ -1,9 +1,9 @@
 class Constants {
     constructor() {
         this.standardColors = {
-            red: 0xFF0000,
-            green: 0x00FF00,
-            blue: 0x0000FF
+			red: 0xC80000,
+			green: 0x009600,
+			blue: 0x000096
         };
         this.prefix = '$';
         this.prefixRegex = /^[$]/;
