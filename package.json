@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/lolsokje/FantasyBot#readme",
   "dependencies": {
-    "discord.js": "git+https://github.com/discordjs/discord.js.git",
+    "discord.js": "^12.5.1",
     "node-fetch": "^2.6.1",
-    "patron.js": "git+https://github.com/LJNeon/patron.js.git"
+    "patron.js": "git+https://github.com/FozzieHi/patron.git"
   }
 }
