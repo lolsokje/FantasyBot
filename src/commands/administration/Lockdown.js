@@ -24,7 +24,7 @@ class Lockdown extends patron.Command {
 		const channel = args.channel;
 		const everyoneRole = await msg.guild.roles.everyone;
 		const permissions = await channel.permissionsFor(everyoneRole).toArray();
-		const setLocked = permissions.includes('SEND_MESSAGES') ? false : null;
+		const setLocked = permissions.includes('SEND_MESSAGES') ? false : true;
 
 		await channel.updateOverwrite(channel.guild.roles.everyone, { SEND_MESSAGES: setLocked });
 
