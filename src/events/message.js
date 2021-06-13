@@ -21,7 +21,7 @@ client.on('message', (msg) => {
         }
 
         msg.sender = new Sender(msg);
-        
+
         const result = await handler.run(msg, Constants.prefix.length);
 
         if (result.success === false) {
@@ -29,8 +29,6 @@ client.on('message', (msg) => {
 
             if (result.commandError === patron.CommandError.InvalidArgCount) {
                 message = "You need to provide all required arguments";
-            } else if (result.commandError === patron.CommandError.UnknownCmd) {
-                message = "This command doesn't exist.";
             } else {
                 message = result.errorReason;
             }
