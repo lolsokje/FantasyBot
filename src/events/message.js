@@ -29,11 +29,9 @@ client.on('message', (msg) => {
 
             if (result.commandError === patron.CommandError.InvalidArgCount) {
                 message = "You need to provide all required arguments";
-            } else {
-                message = result.errorReason;
-            }
 
-            return msg.sender.reply(message, { color: '0xFF0000'});
+				return msg.sender.reply(message, { color: '0xFF0000'});
+            }
         }
     })();
 });
