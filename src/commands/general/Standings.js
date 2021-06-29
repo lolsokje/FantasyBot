@@ -29,14 +29,15 @@ class Standings extends patron.Command {
     async run(msg, args) {
         const type = args.type.toLowerCase();
         const year = parseInt(args.year);
+		const currentYear = new Date().getFullYear();
         const teamTypes = ['teams', 'team', 'constructor', 'constructors', 'wcc'];
         const driverTypes = ['drivers', 'driver', 'wdc'];
         const allTypes = ['all', 'both'];
 
         if (year === 2008) {
             return msg.sender.reply('Go fuck yourself', { color: Constants.standardColors.red });
-        } else if (year < 1950 || year > 2020) {
-            return msg.sender.reply('Year must be between 1950 and 2020', { color: Constants.standardColors.red });
+        } else if (year < 1950 || year > currentYear) {
+            return msg.sender.reply('Year must be between 1950 and ' + currentYear, { color: Constants.standardColors.red });
         } else if (year < 1958 && (teamTypes.includes(type) || allTypes.includes(type))) {
             return msg.sender.reply('There was no constructors\' title before 1958, you donkey', { color: Constants.standardColors.red });
         } else if (!teamTypes.includes(type) && !driverTypes.includes(type) && !allTypes.includes(type)) {
