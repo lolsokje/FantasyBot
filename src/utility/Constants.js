@@ -38,7 +38,9 @@ class Constants {
             '631216913267032067': 'FantasyBot',
             '466346997667069964': '@everyone',
             '466710569639084032': 'Franki Lauda',
-            '482175767908712468': 'Admins'
+            '482175767908712468': 'Admins',
+            '775862805907505153': 'Claire\'s No.1',
+            '918848587172024420': 'rona',
         };
 
         this.allowedChannelIds = {
