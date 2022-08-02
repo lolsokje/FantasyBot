@@ -35,28 +35,6 @@ class Dunce extends patron.Command {
 		const member = msg.guild.members.cache.find(m => m.id === args.user.id);
 		const dunceRole = msg.guild.roles.cache.find(r => r.name === 'Dunce');
 
-		const duration = args.duration;
-		const time = duration.replace(/\D/g, '');
-		let millis;
-		let unit;
-
-		if (duration.includes('s')) {
-			millis = time * 1000;
-			unit = 'seconds';
-		} else if (duration.includes('m')) {
-			millis = time * 60000;
-			unit = 'minutes';
-		} else if (duration.includes('h')) {
-			millis = time * 3600000;
-			unit = 'hours';
-		} else if (duration.includes('d')) {
-			millis = time * 86400000;
-			unit = 'days';
-		} else {
-			msg.sender.reply('Please give a valid duration, possibilities; seconds (s), minutes (m), hours (h), days (d)', { color: Constants.standardColors.red });
-		}
-
-
 		const hasRole = await member.roles.cache.find(r => r.name === 'Dunce');
 
 		if (hasRole) {
@@ -64,6 +42,27 @@ class Dunce extends patron.Command {
 
 			return msg.sender.reply(`${member.displayName} is no longer a dunce`);
 		} else {
+			const duration = args.duration;
+			const time = duration.replace(/\D/g, '');
+			let millis;
+			let unit;
+
+			if (duration.includes('s')) {
+				millis = time * 1000;
+				unit = 'seconds';
+			} else if (duration.includes('m')) {
+				millis = time * 60000;
+				unit = 'minutes';
+			} else if (duration.includes('h')) {
+				millis = time * 3600000;
+				unit = 'hours';
+			} else if (duration.includes('d')) {
+				millis = time * 86400000;
+				unit = 'days';
+			} else {
+				msg.sender.reply('Please give a valid duration, possibilities; seconds (s), minutes (m), hours (h), days (d)', { color: Constants.standardColors.red });
+			}
+
 			await member.roles.add(dunceRole);
 
 			setTimeout(() => {
