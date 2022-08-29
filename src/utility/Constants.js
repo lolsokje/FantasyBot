@@ -42,6 +42,7 @@ class Constants {
 			'482175767908712468': 'Admins',
 			'775862805907505153': 'Claire\'s No.1',
 			'918848587172024420': 'rona',
+			'1013842840373174313': 'sokjetech-tester'
 		};
 
 		this.allowedChannelIds = {
