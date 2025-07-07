@@ -8,6 +8,8 @@ class Constants {
 		this.prefix = '$';
 		this.prefixRegex = /^[$]/;
 
+        this.presidentMedalRole = '1391776413282996365';
+
 		this.permanentRoleIds = {
 			'480800248281956375': 'allpeoplehere',
 			'631154732055920660': 'carl-bot',
@@ -22,6 +24,7 @@ class Constants {
 			'631216913267032067': 'FantasyBot',
 			'466346997667069964': '@everyone',
 			'466710569639084032': 'Franki Lauda',
+            '1391776413282996365': 'FIA President Medal',
 		};
 
 		this.protectedRoleIds = {
@@ -42,7 +45,8 @@ class Constants {
 			'482175767908712468': 'Admins',
 			'775862805907505153': 'Claire\'s No.1',
 			'918848587172024420': 'rona',
-			'1013842840373174313': 'sokjetech-tester'
+			'1013842840373174313': 'sokjetech-tester',
+            '1391776413282996365': 'FIA President Medal',
 		};
 
 		this.allowedChannelIds = {
